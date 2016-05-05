@@ -1,0 +1,36 @@
+NAME:
+   gh-token - A simple cli to fetch a github api OAuth token
+
+USAGE:
+   gh-token [options] <scope> [<scope> ...]
+
+   scope may be one of:
+     
+     user   user:email  user:follow   public_repo   
+     repo   repo_deployment repo:status   delete_repo   
+     notifications  gist    read:repo_hook    write:repo_hook   
+     admin:repo_hook  admin:org_hook  read:org    write:org   
+     admin:org    read:public_key write:public_key  admin:public_key  
+   
+VERSION:
+   0.0.1
+   
+COMMANDS:
+GLOBAL OPTIONS:
+   --note NOTE, -n NOTE create token with NOTE.
+      If not provided will be 'gh-token @ TIMESTAMP'
+   --user USER, -u USER Instead of prompting, acquire token for USER
+      Alternatively, use env var: [$GITHUB_USERNAME]
+   --password PW, -p PW Instead of prompting, login with password PW
+      Alternatively, use env var: [$GITHUB_PASSWORD]
+   --2fa OTP, -2 OTP  2fa OTP with which to aquire a token (if needed)
+   --help, -h   show help
+   --version, -v  print the version
+   
+COPYRIGHT:
+   gh-token  (c) 2016 Tulip Interfaces
+             Provided under terms of Apache License
+   go-github (c) 2013 The go-github AUTHORS
+                      https://github.com/google/go-github/blob/master/AUTHORS
+             Provided under terms of BSD license
+   
